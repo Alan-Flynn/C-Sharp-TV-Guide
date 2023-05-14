@@ -1,0 +1,14 @@
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.csproj.AssemblyReference.cache
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV_Guide_Version_Control.Form1.resources
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV_Guide_Version_Control.Form2.resources
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV_Guide_Version_Control.Form3.resources
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV_Guide_Version_Control.Form_template.resources
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV_Guide_Version_Control.Properties.Resources.resources
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.csproj.GenerateResource.cache
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.csproj.CoreCompileInputs.cache
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\bin\Debug\TV Guide Version Control.exe.config
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\bin\Debug\TV Guide Version Control.exe
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\bin\Debug\TV Guide Version Control.pdb
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.exe
+C:\Users\Alan\source\repos\TV Guide Version Control\TV Guide Version Control\obj\Debug\TV Guide Version Control.pdb

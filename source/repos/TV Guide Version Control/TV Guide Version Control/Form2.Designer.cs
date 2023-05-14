@@ -33,9 +33,9 @@
             // 
             // btn_create_profile
             // 
-            this.btn_create_profile.Location = new System.Drawing.Point(131, 99);
+            this.btn_create_profile.Location = new System.Drawing.Point(86, 84);
             this.btn_create_profile.Name = "btn_create_profile";
-            this.btn_create_profile.Size = new System.Drawing.Size(112, 46);
+            this.btn_create_profile.Size = new System.Drawing.Size(164, 74);
             this.btn_create_profile.TabIndex = 0;
             this.btn_create_profile.Text = "Create Profile";
             this.btn_create_profile.UseVisualStyleBackColor = true;
@@ -49,7 +49,9 @@
             this.Controls.Add(this.btn_create_profile);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Controls.SetChildIndex(this.btn_create_profile, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

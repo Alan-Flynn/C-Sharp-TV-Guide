@@ -16,7 +16,14 @@ namespace TV_Guide_Version_Control
         public Profile current_profile;
         public List<Profile> profiles;
 
-        public Form_template(Profile current_profile, List<Profile> profiles)
+        public Form_template()
+        {
+            InitializeComponent();
+            this.current_profile = null;
+            this.profiles = new List<Profile>();
+        }
+
+        protected Form_template(Profile current_profile, List<Profile> profiles)
         {
             InitializeComponent();
             this.current_profile = current_profile;

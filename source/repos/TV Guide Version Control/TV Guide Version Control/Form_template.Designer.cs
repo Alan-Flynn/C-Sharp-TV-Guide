@@ -45,7 +45,7 @@
             // 
             this.tb_profiles.Location = new System.Drawing.Point(32, 402);
             this.tb_profiles.Name = "tb_profiles";
-            this.tb_profiles.Size = new System.Drawing.Size(100, 22);
+            this.tb_profiles.Size = new System.Drawing.Size(188, 22);
             this.tb_profiles.TabIndex = 1;
             this.tb_profiles.Text = "Profiles: ";
             // 
@@ -66,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox tb_tvguide;
-        private System.Windows.Forms.TextBox tb_profiles;
+        public System.Windows.Forms.TextBox tb_profiles;
     }
 }

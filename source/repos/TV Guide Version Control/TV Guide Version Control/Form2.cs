@@ -35,7 +35,7 @@ namespace TV_Guide_Version_Control
                     string name = text_box.Text.Substring(18);
                     Profile profile = new Profile(name);
                     this.current_profile = profile;
-                    //this.tb_profiles.Text += " " + name;
+                    this.tb_profiles.Text += " " + name;
                     this.Controls.Remove(text_box);
                 }
             };

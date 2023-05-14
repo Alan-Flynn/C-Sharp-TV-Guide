@@ -44,7 +44,7 @@
             // 
             // btn_movies
             // 
-            this.btn_movies.Location = new System.Drawing.Point(86, 202);
+            this.btn_movies.Location = new System.Drawing.Point(86, 190);
             this.btn_movies.Name = "btn_movies";
             this.btn_movies.Size = new System.Drawing.Size(164, 74);
             this.btn_movies.TabIndex = 1;
@@ -60,7 +60,10 @@
             this.Controls.Add(this.btn_profiles);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Controls.SetChildIndex(this.btn_profiles, 0);
+            this.Controls.SetChildIndex(this.btn_movies, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

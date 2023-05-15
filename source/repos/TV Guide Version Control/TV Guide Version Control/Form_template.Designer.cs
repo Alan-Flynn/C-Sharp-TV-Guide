@@ -34,7 +34,7 @@
             // 
             // tb_tvguide
             // 
-            this.tb_tvguide.Location = new System.Drawing.Point(319, 46);
+            this.tb_tvguide.Location = new System.Drawing.Point(317, 12);
             this.tb_tvguide.Name = "tb_tvguide";
             this.tb_tvguide.Size = new System.Drawing.Size(100, 22);
             this.tb_tvguide.TabIndex = 0;

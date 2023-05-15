@@ -50,6 +50,7 @@
             this.btn_movies.TabIndex = 1;
             this.btn_movies.Text = "Movies";
             this.btn_movies.UseVisualStyleBackColor = true;
+            this.btn_movies.Click += new System.EventHandler(this.btn_movies_Click);
             // 
             // Form1
             // 
@@ -60,6 +61,7 @@
             this.Controls.Add(this.btn_profiles);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Controls.SetChildIndex(this.tb_profiles, 0);
             this.Controls.SetChildIndex(this.btn_profiles, 0);
             this.Controls.SetChildIndex(this.btn_movies, 0);
             this.ResumeLayout(false);

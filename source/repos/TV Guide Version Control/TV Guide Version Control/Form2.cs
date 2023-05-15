@@ -35,6 +35,7 @@ namespace TV_Guide_Version_Control
                     string name = text_box.Text.Substring(18);
                     Profile profile = new Profile(name);
                     this.current_profile = profile;
+                    this.profiles.Add(profile);
                     this.tb_profiles.Text += " " + name;
                     this.Controls.Remove(text_box);
                 }
@@ -47,6 +48,20 @@ namespace TV_Guide_Version_Control
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("In click menu!");
+            foreach (Profile profile in profiles)
+            {
+                Console.WriteLine(profile.Name);
+            }
+            Form1 form1 = new Form1(current_profile, profiles);
+            form1.tb_profiles.Text = tb_profiles.Text;
+            form1.Show();
+
+            this.Hide();
         }
     }
 }

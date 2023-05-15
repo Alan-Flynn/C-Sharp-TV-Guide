@@ -9,8 +9,8 @@ namespace TV_Guide_Version_Control
     public class Profile
     {
         public string Name { get; set; }
-        public List<string> FavoriteFilms    { get; private set; }
-        public List<string> FavoriteTVShows { get; private set; }
+        public List<string> FavoriteFilms    { get; set; }
+        public List<string> FavoriteTVShows { get; set; }
 
         public Profile(string name)
         {

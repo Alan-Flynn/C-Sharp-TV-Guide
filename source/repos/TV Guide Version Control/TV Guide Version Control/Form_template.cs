@@ -21,31 +21,43 @@ namespace TV_Guide_Version_Control
             InitializeComponent();
             this.current_profile = null;
             this.profiles = new List<Profile>();
+            //this.tb_profiles.Text += profiles;
         }
 
         protected Form_template(Profile current_profile, List<Profile> profiles)
         {
             InitializeComponent();
             this.current_profile = current_profile;
-            this.profiles = new List<Profile>();
+            this.profiles = profiles;
+
+            if (profiles != null)
+            {
+                foreach (Profile profile in profiles)
+                {
+                    if (profile == current_profile)
+                    {
+                        tb_profiles.AppendText(profile.Name + Environment.NewLine);
+                    }
+                    else
+                    {
+                        tb_profiles.AppendText(profile.Name + Environment.NewLine);
+                    }
+                }
+            }
         }
-
-        private void Form_template_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void CreateNewProfile(string newProfileName)
         {
+            if (this.profiles == null)
+            {
+                this.profiles = new List<Profile>();
+            }
             this.current_profile = new Profile(newProfileName);
-            //this.profiles.Add(current_profile);
-            this.tb_profiles.Text += newProfileName;
-
+            this.profiles.Add(current_profile);
+            this.tb_profiles.Text += " " + newProfileName;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)

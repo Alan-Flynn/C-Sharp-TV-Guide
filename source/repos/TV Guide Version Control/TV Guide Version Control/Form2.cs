@@ -17,6 +17,8 @@ namespace TV_Guide_Version_Control
         public Form2(Profile current_profile, List<Profile> profiles) : base(current_profile, profiles)
         {
             InitializeComponent();
+            this.Text = "TV Guide";
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -28,18 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_tvguide = new System.Windows.Forms.TextBox();
             this.tb_profiles = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // tb_tvguide
-            // 
-            this.tb_tvguide.Location = new System.Drawing.Point(317, 12);
-            this.tb_tvguide.Name = "tb_tvguide";
-            this.tb_tvguide.Size = new System.Drawing.Size(100, 22);
-            this.tb_tvguide.TabIndex = 0;
-            this.tb_tvguide.Text = "TV Guide";
-            this.tb_tvguide.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_profiles
             // 
@@ -55,7 +45,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tb_profiles);
-            this.Controls.Add(this.tb_tvguide);
             this.Name = "Form_template";
             this.Text = "Form_template";
             this.ResumeLayout(false);
@@ -64,8 +53,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tb_tvguide;
         public System.Windows.Forms.TextBox tb_profiles;
     }
 }

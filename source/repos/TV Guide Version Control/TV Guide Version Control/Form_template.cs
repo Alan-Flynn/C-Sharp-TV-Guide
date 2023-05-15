@@ -19,6 +19,7 @@ namespace TV_Guide_Version_Control
         public Form_template()
         {
             InitializeComponent();
+            this.Text = "TV Guide";
             this.current_profile = null;
             this.profiles = new List<Profile>();
             //this.tb_profiles.Text += profiles;
@@ -27,6 +28,7 @@ namespace TV_Guide_Version_Control
         protected Form_template(Profile current_profile, List<Profile> profiles)
         {
             InitializeComponent();
+            this.Text = "TV Guide";
             this.current_profile = current_profile;
             this.profiles = profiles;
 

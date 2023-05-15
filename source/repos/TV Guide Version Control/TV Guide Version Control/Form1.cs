@@ -16,6 +16,8 @@
             public Form1(Profile current_profile, List<Profile> profiles) : base(current_profile, profiles)
             {
                 InitializeComponent();
+            this.Text = "TV Guide";
+
             string name;
 
                 if (current_profile == null)
@@ -79,14 +81,18 @@
 
         private void btn_movies_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("In click movies!");
-            foreach (Profile profile in profiles)
-            {
-                Console.WriteLine(profile.Name);
-            }
             Form3 form3 = new Form3(current_profile, profiles);
             form3.tb_profiles.Text = tb_profiles.Text;
             form3.Show();
+
+            this.Hide();
+        }
+
+        private void btn_TVShows_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4(current_profile, profiles);
+            form4.tb_profiles.Text = tb_profiles.Text;
+            form4.Show();
 
             this.Hide();
         }

@@ -29,13 +29,34 @@
 
         private void button1_Click(object sender, EventArgs e)
             {
-                Form2 form2 = new Form2(current_profile, profiles);
-                form2.tb_profiles.Text = tb_profiles.Text;
-                form2.Show();
-
-                // Hide the current form
-                this.Hide();
+            if (this.profiles.Count >= 4)
+            {
+                MessageBox.Show("You can only have a maximum of 4 profiles.");
+                return;
             }
+            // Create a new TextBox control
+            TextBox text_box = new TextBox();
+            text_box.Size = new Size(170, 20);
+            text_box.Location = new Point(btn_profiles.Left, btn_profiles.Top - text_box.Height - 10);
+
+            text_box.Text = "Input a new name: ";
+
+            text_box.KeyDown += (s, args) =>
+            {
+                if (args.KeyCode == Keys.Enter && text_box.Text.Substring(18) != "")
+                {
+                    string name = text_box.Text.Substring(18);
+                    Profile profile = new Profile(name);
+                    this.current_profile = profile;
+                    this.profiles.Add(profile);
+                    this.tb_profiles.Text += " " + name + " ";
+                    this.Controls.Remove(text_box);
+                }
+            };
+
+            // Add the TextBox to the form
+            this.Controls.Add(text_box);
+        }
 
             private string PromptUserForName()
             {
@@ -96,5 +117,91 @@
 
             this.Hide();
         }
+
+            private void button1_Click_1(object sender, EventArgs e)
+        {
+            // Create a new form to display the list of profiles
+            Form profileListForm = new Form();
+            profileListForm.Text = "Select Profile";
+            profileListForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            profileListForm.MaximizeBox = false;
+            profileListForm.MinimizeBox = false;
+            profileListForm.StartPosition = FormStartPosition.CenterScreen;
+
+            // Create a ListBox to display the profiles
+            ListBox profileListBox = new ListBox();
+            profileListBox.Dock = DockStyle.Top;  // Set the ListBox to be docked to the top
+            profileListBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+
+            // Add the profiles to the ListBox
+            foreach (Profile profile in profiles)
+            {
+                profileListBox.Items.Add(profile.Name);
+            }
+
+            // Add the ListBox to the form
+            profileListForm.Controls.Add(profileListBox);
+
+            // Create OK, Delete, and Cancel buttons
+            Button okButton = new Button();
+            okButton.Text = "OK";
+            okButton.DialogResult = DialogResult.OK;
+            okButton.Dock = DockStyle.Right;
+
+            Button deleteButton = new Button();
+            deleteButton.Text = "Delete";
+            deleteButton.DialogResult = DialogResult.Abort;
+            deleteButton.Dock = DockStyle.Right;
+
+            Button cancelButton = new Button();
+            cancelButton.Text = "Cancel";
+            cancelButton.DialogResult = DialogResult.Cancel;
+            cancelButton.Dock = DockStyle.Right;
+
+            // Add the buttons to the form
+            profileListForm.Controls.Add(okButton);
+            profileListForm.Controls.Add(deleteButton);
+            profileListForm.Controls.Add(cancelButton);
+
+            // Calculate the new height of the form
+            int newHeight = (int)(profileListForm.Height * 0.4);
+
+            // Set the height of the form to the new height
+            profileListForm.Height = newHeight;
+
+            // Show the form as a dialog and get the result
+            DialogResult result = profileListForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                // Get the selected profile
+                int selectedIndex = profileListBox.SelectedIndex;
+                if (selectedIndex >= 0 && selectedIndex < profiles.Count)
+                {
+                    current_profile = profiles[selectedIndex];
+                }
+            }
+            else if (result == DialogResult.Abort)
+            {
+                // Delete the selected profile
+                int selectedIndex = profileListBox.SelectedIndex;
+                if (selectedIndex >= 0 && selectedIndex < profiles.Count)
+                {
+                    if (current_profile != profiles[selectedIndex])
+                    {
+                        tb_profiles.Text = tb_profiles.Text.Replace(" " + profiles[selectedIndex].Name + " ", "");
+                        profiles.RemoveAt(selectedIndex);
+                        // Update the ListBox
+                        profileListBox.Items.RemoveAt(selectedIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("You cannot delete the current profile.");
+                    }
+                }
+            }   
+        }
+
+        
     }
     }

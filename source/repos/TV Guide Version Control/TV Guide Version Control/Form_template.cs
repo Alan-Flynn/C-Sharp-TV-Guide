@@ -47,6 +47,8 @@ namespace TV_Guide_Version_Control
                 }
             }
         }
+
+ 
         public void CreateNewProfile(string newProfileName)
         {
             if (this.profiles == null)

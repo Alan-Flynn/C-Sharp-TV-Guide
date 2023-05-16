@@ -18,7 +18,6 @@ namespace TV_Guide_Version_Control
         {
             InitializeComponent();
             this.Text = "TV Guide";
-
         }
 
         private void button1_Click(object sender, EventArgs e)

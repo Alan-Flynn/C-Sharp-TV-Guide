@@ -42,12 +42,9 @@ namespace TV_Guide_Version_Control
                 this.Controls.Add(textBox);
                 profileTextBoxes.Add(textBox);
             }
-
-            // Display the profile information in the text boxes
-            UpdateProfileTextBoxes();
         }
 
-        private void UpdateProfileTextBoxes()
+        public void UpdateProfileTextBoxes()
         {
             for (int i = 0; i < profiles.Count; i++)
             {
@@ -77,6 +74,7 @@ namespace TV_Guide_Version_Control
                 textBox.Text = sb.ToString();
             }
         }
+
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

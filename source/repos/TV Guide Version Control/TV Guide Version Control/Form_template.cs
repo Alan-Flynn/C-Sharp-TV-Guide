@@ -22,7 +22,6 @@ namespace TV_Guide_Version_Control
             this.Text = "TV Guide";
             this.current_profile = null;
             this.profiles = new List<Profile>();
-            //this.tb_profiles.Text += profiles;
         }
 
         protected Form_template(Profile current_profile, List<Profile> profiles)
@@ -58,15 +57,6 @@ namespace TV_Guide_Version_Control
             this.current_profile = new Profile(newProfileName);
             this.profiles.Add(current_profile);
             this.tb_profiles.Text += " " + newProfileName;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void tb_add_profile(String Profile_name)

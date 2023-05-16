@@ -12,11 +12,11 @@ using TV_Guide_Version_Control;
 
 namespace TV_Guide_Version_Control
 {
-    public partial class Form4 : Form_template
+    public partial class MoviesForm : Form_template
     {
         private List<TextBox> profileTextBoxes;
 
-        public Form4(Profile current_profile, List<Profile> profiles) : base(current_profile, profiles)
+        public MoviesForm(Profile current_profile, List<Profile> profiles) : base(current_profile, profiles)
         {
             InitializeComponent();
             this.Text = "TV Guide";
@@ -42,9 +42,12 @@ namespace TV_Guide_Version_Control
                 this.Controls.Add(textBox);
                 profileTextBoxes.Add(textBox);
             }
+
+            // Display the profile information in the text boxes
+            UpdateProfileTextBoxes();
         }
 
-        public void UpdateProfileTextBoxes()
+        private void UpdateProfileTextBoxes()
         {
             for (int i = 0; i < profiles.Count; i++)
             {
@@ -75,8 +78,7 @@ namespace TV_Guide_Version_Control
             }
         }
 
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             int count = checkedListBox1.CheckedItems.Count;
 
@@ -100,17 +102,17 @@ namespace TV_Guide_Version_Control
                 }
 
                 // Update the current profile's favorite movies
-                current_profile.FavoriteTVShows = selectedItems;
+                current_profile.FavoriteFilms = selectedItems;
 
                 // Update the profile text boxes
                 UpdateProfileTextBoxes();
             }
-
+        
         }
 
-        private void btn_menu_Click(object sender, EventArgs e)
+        private void btn_profiles_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1(current_profile, profiles);
+            MainMenuForm form1 = new MainMenuForm(current_profile, profiles);
             form1.tb_profiles.Text = tb_profiles.Text;
             form1.Show();
 

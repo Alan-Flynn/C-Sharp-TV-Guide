@@ -1,6 +1,6 @@
 ﻿namespace TV_Guide_Version_Control
 {
-    partial class Form4
+    partial class TVShowsForm
     {
         /// <summary>
         /// Required designer variable.

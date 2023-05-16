@@ -1,6 +1,6 @@
 ﻿namespace TV_Guide_Version_Control
 {
-    partial class Form3
+    partial class MoviesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             this.btn_menu.TabIndex = 2;
             this.btn_menu.Text = "Main Menu";
             this.btn_menu.UseVisualStyleBackColor = true;
-            this.btn_menu.Click += new System.EventHandler(this.button1_Click);
+            this.btn_menu.Click += new System.EventHandler(this.btn_profiles_Click);
             // 
             // Form3
             // 

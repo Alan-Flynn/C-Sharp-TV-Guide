@@ -16,7 +16,7 @@ namespace TV_Guide_Version_Control
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(null, null));
+            Application.Run(new MainMenuForm(null, null));
         }
     }
 }
